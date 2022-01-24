@@ -43,3 +43,29 @@ data.map((item) => {
   imageContainer.innerHTML = `<img src=${item.img} alt=${item.title} width="100%">`;
   folioWrapper.append(imageContainer);
 });
+const folioSection = document.querySelector(".folio-section");
+const aboutSection = document.querySelector(".about-section");
+const contactSection = document.querySelector(".contact-section");
+
+const homeBtn = document.querySelector(".logo");
+homeBtn.addEventListener("click", () => {
+  window.scrollTo(0, 0);
+});
+
+const folioBtn = document.querySelector(".portfolio-btn");
+folioBtn.addEventListener("click", () => {
+  window.scrollTo(0, folioSection.offsetTop);
+});
+const aboutBtn = document.querySelector(".about-btn");
+aboutBtn.addEventListener("click", () => {
+  window.scrollTo(0, aboutSection.offsetTop);
+});
+const contactBtn = document.querySelector(".contact-btn");
+contactBtn.addEventListener("click", () => {
+  window.scrollTo(0, contactSection.offsetTop);
+});
+
+const scrollTop = document.querySelector(".scroll-top");
+scrollTop.addEventListener("click", () => {
+  window.scrollTo(0, 0);
+});
